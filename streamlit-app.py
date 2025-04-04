@@ -73,7 +73,8 @@ lot_area_renov = st.slider("Lot Area Renovation", min_value=651, max_value=56061
 
 Number_of_schools_nearby = st.slider("Number of schools nearby", min_value=1, max_value=3 , step = 1)
 
-Distance_from_the_Airport = st.slider ("Distance from the airport" , min_values = 50 , max_value=80 , step = 1)
+Distance_from_the_Airport = st.slider("Distance from the airport", min_value=50, max_value=80, step=1)
+
 
 input_data = np.array([
     "id",
