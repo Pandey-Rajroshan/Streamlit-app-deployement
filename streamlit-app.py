@@ -101,18 +101,22 @@ input_data = np.array([
 ]).reshape(1,-1)
 
 #Predict the price of the house
-if st.button("Submit"):
-    prediction = model.predict(input_data)
-#Get the model predictions
-# make sure the prediction is a float before displaying
-if isinstance(prediction , np.ndarray):
-    #if its a  Numpy array ,extract first element
-    prediction = float (prediction[0])
+if st.button("📊 Predict Price"):
+    try:
+        prediction = model.predict(input_data)
+        
+        # Check the type of prediction and process accordingly
+        if isinstance(prediction, np.ndarray):
+            prediction = float(prediction.flatten()[0])
+        elif isinstance(prediction, list):
+            prediction = float(prediction[0])
+        elif isinstance(prediction, tf.Tensor):
+            prediction = float(prediction.numpy().item())
+        else:
+            raise ValueError("Unexpected data type for prediction.")
 
-elif isinstance(prediction , list):
-    # if its a list , extract the first element
-    prediction = float(prediction[0])
-elif isinstance(prediction , tf.Tensor):
- prediction = float(prediction.numpy().item())
+        st.success(f"🏡 Estimated Price: ₹{prediction:.2f} lakhs")
 
-st.success(f"Estimated price of the House: {prediction:.2f} lakhs")
+    except Exception as e:
+        st.error(f"⚠️ Prediction Error: {e}")
+
