@@ -36,7 +36,7 @@ Date = st.date_input("Select a date")
 
 number_of_bedrooms = st.number_input("number of bedrooms",min_value = 2, max_value = 9 , value = 3 )
 
-number_of_bathrooms = st.number_input("number of bathrooms", min_value=1, max_value=6, value=2.5)
+number_of_bathrooms = st.number_input("number of bathrooms", min_value=1.0, max_value=6.0, value=2.5)
 
 number_of_bathrooms = st.slider("living area",min_value=370 , max_value=13540)
 
