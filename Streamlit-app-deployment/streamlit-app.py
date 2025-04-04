@@ -58,7 +58,7 @@ Area_of_the_basement = st.slider("Area of the basement", min_value= 0 , max_valu
 
 Built_Year = st.slider("Built Year" ,min_value=1900 , max_value=2015 , step = 1)
 
-Renovation_Year = st.slider("Renovation Year", min_value = 0 , max_value=0)
+Renovation_Year = st.write("Renovation Year:0")
 
 postal_code = st.number_input("Enter the postal code" , min_value=122003, max_value=122072)
 
