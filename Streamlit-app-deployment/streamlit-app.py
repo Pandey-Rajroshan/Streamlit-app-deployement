@@ -6,7 +6,7 @@ import joblib
 
 # Load the model
 try:
-    model = tf.keras.models.load_model("House_price_predictions.keras")
+    model = tf.keras.models.load_model("House_price_predictions.h5")
     st.success("Model loaded successfully!")
 except Exception as e:
     st.error(f"Error loading the model: {e}")
