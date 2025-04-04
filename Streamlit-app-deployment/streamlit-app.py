@@ -19,10 +19,12 @@ st.markdown(
 )
 
 # Load the saved keras model
+import tensorflow as tf
 try:
     model = tf.keras.models.load_model("House_price_predictions.keras")
+    print("Model loaded successfully!")
 except Exception as e:
-    st.error(f"Error Loading the model: {e}")
+    print(f"Error loading the model: {e}")
 
 # Streamlit UI
 st.title("Price Predictor")
