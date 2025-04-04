@@ -36,17 +36,17 @@ Date = st.date_input("Select a date")
 
 number_of_bedrooms = st.number_input("number of bedrooms",min_value = 2, max_value = 9 , value = 3 )
 
-number_of_bathrooms = st.number_input("number of bathrooms", min_value=1, max_value=6, value=2.5)
+number_of_bathrooms = st.number_input("number of bathrooms", min_value=1.0, max_value=6.0, value=2.5)
 
 number_of_bathrooms = st.slider("living area",min_value=370 , max_value=13540)
 
 lot_area = st.slider("select a lot area", min_value=520, max_value=1074218)
 
-number_of_floors = st.slider("number of floors" , min_value= 1 , max_value=3.5, step=0.5)
+number_of_floors = st.slider("number of floors" , min_value= 1.0 , max_value=3.5, step=0.5)
 
-waterfront_present = st.slider("number of waterfront present", min_value=0, max_value=0)
+waterfront_present = st.write("number of waterfront present", 0)
 
-number_of_views = st.slider("Number of views", min_value=0, max_value=0)
+number_of_views = st.write("Number of views", 0)
 
 condition_of_the_house = st.slider("condition of the house", min_value=1 , max_value=5, step = 1)
 
@@ -58,7 +58,7 @@ Area_of_the_basement = st.slider("Area of the basement", min_value= 0 , max_valu
 
 Built_Year = st.slider("Built Year" ,min_value=1900 , max_value=2015 , step = 1)
 
-Renovation_Year = st.slider("Renovation Year", min_value = 0 , max_value=0)
+Renovation_Year = st.write("Renovation Year",0)
 
 postal_code = st.number_input("Enter the postal code" , min_value=122003, max_value=122072)
 
