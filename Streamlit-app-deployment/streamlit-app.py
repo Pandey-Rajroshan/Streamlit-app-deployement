@@ -42,7 +42,7 @@ number_of_bathrooms = st.slider("living area",min_value=370 , max_value=13540)
 
 lot_area = st.slider("select a lot area", min_value=520, max_value=1074218)
 
-number_of_floors = st.slider("number of floors" , min_value= 1 , max_value=3.5, step=0.5)
+number_of_floors = st.slider("number of floors", min_value=1.0, max_value=3.5, step=0.5)
 
 waterfront_present = st.slider("number of waterfront present", min_value=0, max_value=0)
 
