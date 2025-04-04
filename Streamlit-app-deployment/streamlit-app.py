@@ -30,7 +30,7 @@ st.write(
     "Enter the following parameters/choices to predict house price")
  
 # Collect User inputs
-id = st.number_input("id",min_value=6762810635, max_value = 6762831463 , value = 6782810735 )
+id = st.number_input("id", min_value=6762810635, max_value=6762831463, value=6762810635)
 
 Date = st.date_input("Select a date")
 
